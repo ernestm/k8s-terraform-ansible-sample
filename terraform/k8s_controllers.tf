@@ -24,7 +24,7 @@ resource "aws_instance" "controller" {
     Name            = "controller-${count.index}"
     ansibleFilter   = var.ansibleFilter
     ansibleNodeType = "controller"
-    ansibleNodeName = "controller.var${count.index}"
+    ansibleNodeName = "controller${count.index}"
   }
 }
 
